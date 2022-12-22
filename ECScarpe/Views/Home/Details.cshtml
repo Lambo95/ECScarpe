@@ -1,0 +1,84 @@
+﻿@model ECScarpe.Models.Scarpe
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Scarpe</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdScarpa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdScarpa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prezzo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prezzo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descrizione)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descrizione)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImgPrinc)
+        </dt>
+
+        <dd>
+            <img src="~/Content/Media/@Model.ImgPrinc" class="card-img-top" alt="...">
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImgDet1)
+        </dt>
+
+        <dd>
+            <img src="~/Content/Media/@Model.ImgDet1" class="card-img-top" alt="...">
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImgDet2)
+        </dt>
+
+        <dd>
+            <img src="~/Content/Media/@Model.ImgDet2" class="card-img-top" alt="...">
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vetrina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vetrina)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

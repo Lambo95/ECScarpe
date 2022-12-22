@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>SCARPE</h1>
+</div>
+<div class="container">
+    @Html.ActionLink("Aggiungi", "AggiungiScarpa")
+    <div class="row text-center ">
+        @foreach (ECScarpe.Models.Scarpe scarpa in Model)
+        {
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="~/Content/Media/@scarpa.ImgPrinc" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@scarpa.Nome</h5>
+                        <p class="card-text">@scarpa.Prezzo.ToString("c2")</p>
+                        @Html.ActionLink("Dettaglio", "Details", new { id = scarpa.IdScarpa })
+                        @Html.ActionLink("Modifica", "ModificaProdotto", new { id = scarpa.IdScarpa })
+
+                        @*<a href="#" class="btn btn-primary">Dettagli</a>*@
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
